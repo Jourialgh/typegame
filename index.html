@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Type Racer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Code Type Racer</h1>
+      <span id="language-badge" class="badge"></span>
+    </header>
+
+    <div class="timer-row">
+      <span class="timer-label">Time</span>
+      <span id="timer" class="timer">0.0s</span>
+    </div>
+
+    <pre class="snippet-display"><code id="snippet-display"></code></pre>
+
+    <textarea
+      id="typing-input"
+      class="typing-input"
+      rows="8"
+      placeholder="Start typing to begin..."
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+    ></textarea>
+
+    <div id="results" class="results hidden">
+      <div class="stat-card">
+        <span class="stat-label">Time</span>
+        <span id="stat-time" class="stat-value">0.0s</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">WPM</span>
+        <span id="stat-wpm" class="stat-value">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Accuracy</span>
+        <span id="stat-accuracy" class="stat-value">0%</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="restart-btn" class="btn">Restart</button>
+      <button id="new-snippet-btn" class="btn btn-accent">New Snippet</button>
+    </div>
+  </div>
+
+  <script src="snippets.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
